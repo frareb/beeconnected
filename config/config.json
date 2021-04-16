@@ -1,0 +1,17 @@
+{
+	"development": {
+		"username": "beeconnected_api",
+		"password": null,
+		"database": "beeconnected_api",
+		"host": "127.0.0.1",
+		"dialect": "postgresql"
+	},
+	"tests": {
+		"useDsn": "sqlite::memory:",
+		"logging": false
+	},
+	"production": {
+		"useEnvVariable": "DSN",
+		"logging": false
+	}
+}
