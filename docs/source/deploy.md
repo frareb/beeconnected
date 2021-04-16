@@ -18,10 +18,10 @@ Pour utiliser apt-get dans les bash à la place de yum
 sudo curl https://raw.githubusercontent.com/dvershinin/apt-get-centos/master/apt-get.sh -o /usr/local/bin/apt-get
 sudo chmod 0755 /usr/local/bin/apt-get
 
-On commence par ajouter les dépôts de Node.js, pour avoir les dernières versions (ici, la 15.x LTS) :
+On commence par ajouter les dépôts de Node.js, pour avoir les dernières versions (ici, la 14.x LTS) :
 
 ```bash
-curl -sL https://rpm.nodesource.com/setup_15.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
 ```
 
 On installe ensuite les outils sus-mentionnés ; aucune remarque particulière sauf pour PostgreSQL, qui nécessite de suivre [une procédure spécifique](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7) ; sur CentOS, on fera par exemple :
@@ -52,7 +52,7 @@ systemctl start postgresql-10
 systemctl start nginx
 ```
 
-### Configuration de nginx // ici
+### Configuration de nginx 
 
 A titre indicatif, une configuration possible pour nginx est fournie (/etc/nginx/nginx.conf) ; des ajustements seront sans doute nécessaires avant la mise en production, et il faudra en particulier veiller à la sécurité des données, via une configuration HTTPS sûre.
 
@@ -130,7 +130,7 @@ Ici, nous installerons l'API dans `/var/www/beeconnected` ; la procédure standa
 - à cloner directement un répertoire Git, ce qui permet éventuellement de bénéficier des mises à jour automatiques ;
 - à récupérer une version, puis à décompresser l'archive sur le serveur.
 
-Nous détaillerons ici la procédure utilisant Git :
+Nous détaillerons ici la procédure utilisant Git (sudo yum install git) :
 
 ```bash
 cd /var/www
@@ -140,14 +140,14 @@ cd beeconnected && npm ci --only=prod
 
 ### Création de l'unité systemd
 
-Afin de faciliter la maintenance, et pour permettre le rechargement automatique lors des mises à jours, nous allons créer une unité *systemd* suivant le modèle (à mettre dans `/etc/systemd/system` par exemple) :
+Afin de faciliter la maintenance, et pour permettre le rechargement automatique lors des mises à jours, nous allons créer une unité *systemd* suivant le modèle (à mettre dans `/etc/systemd/system` par exemple avec comme nom beeconnected.service) :
 
 ```
 [Unit]
 Description=beeconnected API server
 After=syslog.target
 After=network.target
-Requires=postgresql.service
+Requires=postgresql-10.service
 
 [Service]
 RestartSec=2s
