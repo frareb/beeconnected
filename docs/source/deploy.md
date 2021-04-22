@@ -54,6 +54,10 @@ systemctl start nginx
 
 ### Configuration de nginx 
 
+certificats à mettre manuellement dans /etc/pki/tls/certs/ /etc/pki/tls/private/ ???
+
+
+
 A titre indicatif, une configuration possible pour nginx est fournie (/etc/nginx/nginx.conf) ; des ajustements seront sans doute nécessaires avant la mise en production, et il faudra en particulier veiller à la sécurité des données, via une configuration HTTPS sûre.
 
 ```
