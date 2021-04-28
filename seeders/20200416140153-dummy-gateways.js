@@ -5,7 +5,7 @@ module.exports = {
 		return queryInterface.bulkInsert("Gateways", [
 			{
 				instituteId: 1,
-				name: "Bat5",
+				name: "ForTesting",
 				lat: 48.70260,
 				lon: 2.14570,
 				createdAt: new Date(),
@@ -21,7 +21,7 @@ module.exports = {
 			},
 			{
 				instituteId: 1,
-				name: "Clermond",
+				name: "Clermont",
 				lat: null,
 				lon: null,
 				createdAt: new Date(),
@@ -37,7 +37,7 @@ module.exports = {
 			},
 			{
 				instituteId: 1,
-				name: "ForTesting",
+				name: "Bat5",
 				lat: null,
 				lon: null,
 				createdAt: new Date(),
@@ -45,6 +45,38 @@ module.exports = {
 			},
 			{
 				instituteId: 2,
+				name: "NA",
+				lat: null,
+				lon: null,
+				createdAt: new Date(),
+				updatedAt: new Date(),
+			},
+			{
+				instituteId: 2,
+				name: "NA",
+				lat: null,
+				lon: null,
+				createdAt: new Date(),
+				updatedAt: new Date(),
+			},
+			{
+				instituteId: 2,
+				name: "NA",
+				lat: null,
+				lon: null,
+				createdAt: new Date(),
+				updatedAt: new Date(),
+			},
+			{
+				instituteId: 3,
+				name: "NA",
+				lat: null,
+				lon: null,
+				createdAt: new Date(),
+				updatedAt: new Date(),
+			},
+			{
+				instituteId: 3,
 				name: "NA",
 				lat: null,
 				lon: null,
