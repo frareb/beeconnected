@@ -12,7 +12,7 @@
 		"version" : "1.0.1"
 	},
 	"servers" : [ {
-		"url" : "https://BeeConnected.ird.fr/",
+		"url" : "http://localhost:3000/",
 		"description" : "Single access point"
 	} ],
 	"tags" : [ {
