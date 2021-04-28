@@ -33,7 +33,7 @@ module.exports = {
 				key: "githubUniqueKey",
 				groupId: 3,
 				gatewayId: null,
-				description: "Accès pour la gateway 1",
+				description: "Accès GitHub",
 				createdAt: new Date(),
 				updatedAt: new Date(),
 			},
@@ -41,7 +41,7 @@ module.exports = {
 				key: createKey(
 					cryptoRandomString({length: 64, type: "base64"})),
 				groupId: 2,
-				gatewayId: 3,
+				gatewayId: 2,
 				description: "Accès pour la gateway 3",
 				createdAt: new Date(),
 				updatedAt: new Date(),
