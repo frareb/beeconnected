@@ -224,6 +224,10 @@ beeconnected_api=# INSERT INTO "Groups"(name, description, "createdAt", "updated
 beeconnected_api=# INSERT INTO "ApiKeys"(key, description, "createdAt", "updatedAt", "groupId") VALUES('clefDeploy', 'Clef pour le déploiement via Github', NOW(), NOW(), 2);
 ```
 
+## Déploiement automatique via github (optionnel)
+
+Ajouter un GitHub Actions dans .github/workflows/main.yml pour que chaque PUSH entraîne une compilation. 
+
 ## Quelques erreurs à ne pas faire
 
 ### `npm install`
