@@ -52,7 +52,7 @@ systemctl start postgresql-10
 systemctl start nginx
 ```
 
-### Configuration de nginx 
+### Configuration de nginx
 
 certificats à mettre manuellement dans /etc/pki/tls/certs/ /etc/pki/tls/private/ ???
 
@@ -221,7 +221,7 @@ postgres=# \u beeconnected_api;
 beeconnected_api=# INSERT INTO "Groups"(name, description, "createdAt", "updatedAt") VALUES('admin', 'Groupe d''administration, avec accès complet', NOW(), NOW());
 beeconnected_api=# INSERT INTO "ApiKeys"(key, description, "createdAt", "updatedAt", "groupId") VALUES('clefAdmin', 'Clef d''administration principale', NOW(), NOW(), 1);
 beeconnected_api=# INSERT INTO "Groups"(name, description, "createdAt", "updatedAt") VALUES('deploy', 'Groupe de déploiement', NOW(), NOW());
-beeconnected_api=# INSERT INTO "ApiKeys"(key, description, "createdAt", "updatedAt", "groupId") VALUES('clefDeploy', 'Clef pour le déploiement via Github', NOW(), NOW(), 1);
+beeconnected_api=# INSERT INTO "ApiKeys"(key, description, "createdAt", "updatedAt", "groupId") VALUES('clefDeploy', 'Clef pour le déploiement via Github', NOW(), NOW(), 2);
 ```
 
 ## Quelques erreurs à ne pas faire
