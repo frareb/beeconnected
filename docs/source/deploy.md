@@ -97,7 +97,7 @@ http {
 	server {
 		listen       80 http2;
 		listen       [::]:80 http2;
-		server_name  example.com;
+		server_name  beeconnected.ird.fr;
 		root         /var/www/beeconnected;
 
 		# Force redirect to the HTTPS website
@@ -226,7 +226,7 @@ beeconnected_api=# INSERT INTO "ApiKeys"(key, description, "createdAt", "updated
 
 ## Déploiement automatique via github (optionnel)
 
-Ajouter un GitHub Actions dans .github/workflows/main.yml pour que chaque PUSH entraîne une compilation. 
+Ajouter un GitHub Actions dans .github/workflows/main.yml pour que chaque PUSH entraîne une compilation.
 
 ## Quelques erreurs à ne pas faire
 
