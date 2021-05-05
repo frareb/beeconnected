@@ -1761,7 +1761,7 @@
 				"properties" : {
 					"name" : {
 						"type" : "string",
-						"example" : "GQE-Le Moulon"
+						"example" : "EGCE"
 					},
 					"countryCode" : {
 						"type" : "string",
@@ -1779,7 +1779,7 @@
 					},
 					"name" : {
 						"type" : "string",
-						"example" : "Raspberry Pi Nairobi"
+						"example" : "Campus1"
 					},
 					"lat" : {
 						"type" : "number",
@@ -1811,11 +1811,11 @@
 					},
 					"model" : {
 						"type" : "string",
-						"example" : "BME680"
+						"example" : "DS18B20"
 					},
 					"description" : {
 						"type" : "string",
-						"example" : "Sur Gateway"
+						"example" : "Frame 5"
 					}
 				}
 			},
