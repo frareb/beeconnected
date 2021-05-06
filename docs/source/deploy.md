@@ -229,7 +229,7 @@ Puis un groupe supplémentaire pour l'accès des gateways à leurs données :
 ```sql
 sudo -u postgres psql
 postgres=# \u beeconnected_api;
-INSERT INTO "Groups"(name, description, "createdAt", "updatedAt") VALUES('gateway', 'Accès des gateways à leurs propres capteurs uniquement', NOW(), NOW());
+beeconnected_api=# INSERT INTO "Groups"(name, description, "createdAt", "updatedAt") VALUES('gateway', 'Accès des gateways à leurs propres capteurs uniquement', NOW(), NOW());
 ```
 
 ## Déploiement automatique via github (optionnel)
