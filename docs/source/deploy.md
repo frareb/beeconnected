@@ -224,6 +224,14 @@ beeconnected_api=# INSERT INTO "Groups"(name, description, "createdAt", "updated
 beeconnected_api=# INSERT INTO "ApiKeys"(key, description, "createdAt", "updatedAt", "groupId") VALUES('clefDeploy', 'Clef pour le déploiement via Github', NOW(), NOW(), 2);
 ```
 
+Puis un groupe supplémentaire pour l'accès des gateways à leurs données :
+
+```sql
+sudo -u postgres psql
+postgres=# \u beeconnected_api;
+INSERT INTO "Groups"(name, description, "createdAt", "updatedAt") VALUES('gateway', 'Accès des gateways à leurs propres capteurs uniquement', NOW(), NOW());
+```
+
 ## Déploiement automatique via github (optionnel)
 
 Ajouter un GitHub Actions dans .github/workflows/main.yml pour que chaque PUSH entraîne une compilation.
