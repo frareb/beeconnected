@@ -134,13 +134,15 @@ Ici, nous installerons l'API dans `/var/www/beeconnected` ; la procédure standa
 - à cloner directement un répertoire Git, ce qui permet éventuellement de bénéficier des mises à jour automatiques ;
 - à récupérer une version, puis à décompresser l'archive sur le serveur.
 
-Nous détaillerons ici la procédure utilisant Git (sudo yum install git) :
+Nous détaillerons ici la procédure utilisant Git (`sudo yum install git`) :
 
 ```bash
 cd /var/www
 git clone https://github.com/frareb/beeconnected.git
 cd beeconnected && npm ci --only=prod
 ```
+
+Il faut ensuite rendre exécutable les fichiers `deploy.sh` et `www` situés dans le dossier `bin/` (`chmod +x`), puis s'assurer que l'utilisateur et le groupe de tous les fichiers et dossiers depuis la racine `/var/www/beeconnected` sont bien `nginx`. Si ce n'est pas le cas il faut modifier l'utilisateur et le groupe avec `chown -R nginx:nginx .` depuis `/var/www/`, puis vérifier avec `ls -lh`.
 
 ### Création de l'unité systemd
 
